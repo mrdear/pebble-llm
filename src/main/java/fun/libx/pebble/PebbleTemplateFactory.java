@@ -22,6 +22,7 @@ public class PebbleTemplateFactory {
             .loader(new StringLoader())
             .registerExtensionCustomizer(PebbleLimitedExtension::new)
             .methodAccessValidator(new ComprehensiveBlacklistMethodAccessValidator())
+            .maxRenderedSize(1024 * 128)
             .build();
 
     /**
